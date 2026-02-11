@@ -129,11 +129,12 @@ class TranslationMemory:
 
 
 class SmartChunker:
-    """智能分块器"""
+    """智能分块器 - 法律文档专用"""
     
-    def __init__(self, max_chars: int = 2000, overlap: int = 100):
-        self.max_chars = max_chars
-        self.overlap = overlap
+    def __init__(self, max_chars: int = 800, overlap: int = 50):
+        # 法律文档：小块逐句翻译，确保不遗漏
+        self.max_chars = max_chars  # 从2000减到800
+        self.overlap = overlap  # 从100减到50
     
     def chunk_elements(self, elements: List[TextElement]) -> List[List[TextElement]]:
         """按元素分块（保持页码完整）"""
@@ -170,25 +171,32 @@ class KimiTranslator:
     
     def __init__(self, memory: TranslationMemory):
         self.memory = memory
-        self.prompt_template = """你是一位专业的文档翻译专家。请将以下文本翻译成中文。
+        self.prompt_template = """你是一位专业的法律文档翻译专家。请严格按照以下要求翻译：
 
-【翻译要求】
-1. 保持专业术语准确和一致
-2. 语言流畅自然，符合中文表达习惯
-3. 保持原文的语气和风格
-4. 人名、地名、公司名等专有名词保留原文或常用译名
-5. 技术术语保持行业标准译法
+【翻译要求 - 必须遵守】
+1. **逐句翻译**：每一句话都要翻译，不要跳过任何内容
+2. **不要总结**：严禁概括、归纳或改写，必须保留原文所有细节
+3. **不要省略**：禁止省略任何从句、修饰语或补充说明
+4. **术语一致**：专业术语必须前后统一，使用标准法律术语
+5. **格式对应**：原文的段落、列表、编号格式都要保留
+6. **保留原文结构**：法律条文的条款、子条款层级必须对应
 
-【术语表】（已确认的术语翻译）
+【禁止事项】
+- ❌ 禁止概括性翻译（如"包括但不限于"改成"包括"）
+- ❌ 禁止合并句子
+- ❌ 禁止删减修饰成分
+- ❌ 禁止改变法律条文的严谨性
+
+【术语表】（必须使用这些译法）
 {glossary}
 
-【上下文摘要】（前文内容）
+【前文上下文】（仅供参考连贯性）
 {context}
 
-【待翻译文本】
+【待翻译文本 - 请逐句翻译】
 {text}
 
-【翻译结果】（只输出翻译后的中文，不要解释）："""
+【逐句翻译结果】（只输出中文翻译，不要解释，保持原文结构）："""
     
     def _build_glossary_text(self) -> str:
         """构建术语表文本"""
