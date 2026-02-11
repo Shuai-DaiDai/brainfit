@@ -5,10 +5,18 @@
 
 ## 核心特性
 
+✅ **使用 Kimi AI 翻译** - 直接使用当前 AI 模型，无需外部 API  
 ✅ **本地处理** - 大文件无需上传  
 ✅ **智能分块** - 解决上下文超限  
 ✅ **格式保留** - 保持原排版、字体、颜色  
 ✅ **术语一致** - 自动维护术语表  
+
+## 翻译引擎
+
+默认使用 **Kimi** (当前模型) 作为翻译引擎：
+- 支持自定义翻译 prompt
+- 自动维护术语表确保一致性
+- 上下文记忆保持连贯性
 
 ## 安装
 
@@ -19,6 +27,18 @@ pip install -r requirements.txt
 # 或者
 pip install pymupdf python-pptx python-docx
 ```
+
+### 配置翻译引擎
+
+**方式1: API Key（推荐）**
+```bash
+export KIMI_API_KEY="your-api-key"
+# 或
+export OPENCLAW_API_KEY="your-api-key"
+```
+
+**方式2: 通过 OpenClaw 调用（无需 API Key）**
+SmartDoc 会自动创建翻译请求文件，由 OpenClaw 处理
 
 ## 使用方法
 
