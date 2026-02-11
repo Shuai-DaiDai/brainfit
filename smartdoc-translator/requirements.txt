@@ -1,0 +1,15 @@
+# SmartDoc Translator Dependencies
+# 智能文档翻译工具依赖
+
+# PDF处理
+PyMuPDF>=1.23.0
+
+# PPT处理
+python-pptx>=0.6.21
+
+# Word处理（可选）
+python-docx>=0.8.11
+
+# 其他工具
+# openai>=1.0.0  # 如需使用OpenAI API
+# anthropic>=0.8.0  # 如需使用Claude API
