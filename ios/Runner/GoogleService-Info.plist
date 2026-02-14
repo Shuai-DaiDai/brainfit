@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCpno0NpEp86YG3YGQs-YTW9kA6MA-na4Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>487600965196</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.brainfit.app</string>
+	<key>PROJECT_ID</key>
+	<string>brainfit-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>brainfit-app.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:487600965196:ios:9039a696a8fd9b7c6e56e9</string>
+</dict>
+</plist>

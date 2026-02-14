@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "487600965196",
+    "project_id": "brainfit-app",
+    "storage_bucket": "brainfit-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487600965196:android:fc417553322563716e56e9",
+        "android_client_info": {
+          "package_name": "com.brainfit.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK6fxJT8vRAIhcf7Ym8tX2tUsTyf0DJ6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

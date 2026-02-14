@@ -1,0 +1,52 @@
+Mobile app UI design for BrainFit - Dashboard/Home Screen
+
+Visual Style:
+- Dark mode background: #0A0E1A (deep navy blue-black)
+- Primary accent: #E94560 (coral red) for CTAs and alerts
+- Secondary accent: #2A9D8F (teal green) for positive data
+- Tertiary accent: #F4A261 (amber gold) for rewards
+- Typography: SF Pro Display / Inter, with SF Mono for data numbers
+- Design aesthetic: Neuro-Tech × Nike Training Club × Oura Ring
+
+Layout Structure (iPhone 15 Pro dimensions, 9:16 ratio):
+
+TOP SECTION:
+- Greeting text: "早安，你的脑力年龄" in #E5E7EB
+- Large number "32" in 64pt SF Mono Bold, white color
+- "岁" in smaller text next to it
+- Red downward arrow and "比实际年龄大4岁" in #E94560 below
+
+MIDDLE SECTION:
+- Streak card with flame icon 🔥 in amber #F4A261
+- "连续健脑 23 天" text
+- Large "23" number in 48pt SF Mono
+
+RECOMMENDED PRACTICE CARD (primary CTA):
+- Rounded card with gradient background (subtle coral to blue)
+- Title: "90秒重启" in white, 20pt Semibold
+- Subtitle: "共振呼吸 — 快速降低心率" in rgba(255,255,255,0.7)
+- Duration badge: "2分钟" in top right
+- Arrow icon indicating clickable
+- Heavy drop shadow for depth
+
+BOTTOM SECTION:
+- 2x2 grid of quick access icons:
+  - 呼吸工具箱 (teal icon)
+  - 心流空间 (blue icon)
+  - 脑力竞技场 (purple icon)
+  - 脑力周报 (amber icon)
+
+BOTTOM NAVIGATION:
+- 4 tabs: 首页, 练习, 连续, 我的
+- Active tab highlighted in coral #E94560
+
+Visual Effects:
+- Neumorphic card design with subtle shadows
+- Glassmorphism effect on recommendation card
+- Minimalist linear icons (2px stroke, rounded caps)
+- No illustrations, no cartoon characters
+- High contrast for readability
+- Generous whitespace between sections
+
+Mood: Professional, scientific, motivating, premium fitness app aesthetic
+Technical: High-fidelity mobile UI mockup, realistic iOS design patterns
