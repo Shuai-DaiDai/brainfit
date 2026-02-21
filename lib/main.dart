@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'app.dart';
-import 'core/services/firebase_service.dart';
 import 'core/services/local_storage_service.dart';
 
+/// BrainFit 主入口 - 纯本地版
+/// 无需 Firebase，所有数据存储在本地
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
@@ -24,11 +25,8 @@ void main() async {
     ),
   );
   
-  // 初始化 Firebase
-  await FirebaseService.initialize();
-  
   // 初始化本地存储
-  await LocalStorageService.initialize();
+  await LocalStorageService().initialize();
   
   runApp(
     const ProviderScope(
